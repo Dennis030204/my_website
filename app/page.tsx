@@ -1,63 +1,78 @@
-import Image from "next/image";
+import { ArrowRight, Sparkles, BookOpen, Code2, LineChart, Coffee } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    // 整体背景：柔和的浅灰白底色 + 深石板灰文字
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 selection:bg-blue-200 font-sans overflow-hidden">
+      
+      {/* 视觉核心：极其柔和的背景弥散氛围光 */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-blue-200/40 blur-[100px] mix-blend-multiply" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-purple-200/40 blur-[100px] mix-blend-multiply" />
+      </div>
+
+      <main className="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-32">
+        
+        {/* Hero 区域：视觉第一落点 */}
+        <header className="mb-20 flex flex-col items-start animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm text-slate-600 mb-8 hover:shadow-md transition-shadow">
+            <Sparkles className="w-4 h-4 text-blue-500" />
+            <span>Welcome to my digital universe</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900">
+            Rongzhi Chen
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light">
+            Bridging the gap between data science precision and creative expression.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        </header>
+
+        {/* Bento Box (便当盒) 布局：质感白色卡片 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          {/* 大卡片：专业作品集 */}
+          <div className="md:col-span-2 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 md:p-10 transition-all hover:shadow-xl shadow-sm">
+            <div className="absolute -top-10 -right-10 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+              <Code2 className="w-64 h-64 text-blue-600" />
+            </div>
+            <div className="relative z-10">
+              <LineChart className="w-10 h-10 text-blue-600 mb-6" />
+              <h2 className="text-3xl font-bold mb-4 tracking-tight text-slate-900">Data & Models</h2>
+              <p className="text-slate-600 mb-12 max-w-md text-lg leading-relaxed">
+                Deep dives into quantitative finance, predictive modeling, and analytics. Where logic meets execution.
+              </p>
+              <button className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200">
+                Explore Projects <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* 右侧小卡片 1：内容创作 */}
+          <div className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-50 to-purple-50 border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm">
+            <BookOpen className="w-8 h-8 text-purple-600 mb-6" />
+            <h2 className="text-2xl font-bold mb-3 tracking-tight text-slate-900">Thoughts</h2>
+            <p className="text-slate-600 mb-8 leading-relaxed">
+              Reflections on sociology, philosophy, and the algorithms of daily life.
+            </p>
+            <button className="inline-flex items-center gap-2 text-purple-700 font-semibold group-hover:gap-3 transition-all">
+              Read Articles <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* 底部全宽卡片：生活方式/Vlog */}
+          <div className="md:col-span-3 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <Coffee className="w-6 h-6 text-orange-500" />
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900">Life & Logic</h2>
+              </div>
+              <p className="text-slate-600">Content creation, bottom-up cooking logic, and visual storytelling.</p>
+            </div>
+            <button className="mt-6 md:mt-0 inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 shadow-sm">
+              View Gallery <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
         </div>
       </main>
     </div>
