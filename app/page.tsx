@@ -74,11 +74,10 @@ export default function Home() {
               </div>
               <p className="text-slate-600">Content creation, bottom-up cooking logic, and visual storytelling.</p>
             </div>
-            <button className="mt-6 md:mt-0 inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 shadow-sm">
+            <Link href="/life" className="mt-6 md:mt-0 inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 shadow-sm w-fit">
               View Gallery <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
-
         </div>
       </main>
     </div>
