@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles, BookOpen, Code2, LineChart, Coffee } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -41,9 +42,9 @@ export default function Home() {
               <p className="text-slate-600 mb-12 max-w-md text-lg leading-relaxed">
                 Deep dives into quantitative finance, predictive modeling, and analytics. Where logic meets execution.
               </p>
-              <button className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200">
+              <Link href="/portfolio" className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200 w-fit">
                 Explore Projects <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -54,9 +55,9 @@ export default function Home() {
             <p className="text-slate-600 mb-8 leading-relaxed">
               Reflections on sociology, philosophy, and the algorithms of daily life.
             </p>
-            <button className="inline-flex items-center gap-2 text-purple-700 font-semibold group-hover:gap-3 transition-all">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-purple-700 font-semibold group-hover:gap-3 transition-all w-fit">
               Read Articles <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
 
           {/* 底部全宽卡片：生活方式/Vlog */}
