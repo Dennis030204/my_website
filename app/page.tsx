@@ -23,9 +23,14 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900">
             Rongzhi Chen
           </h1>
+          <Link href="/about" className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200 shadow-sm">
+            More About Me & Resume <ArrowRight className="w-4 h-4" />
+          </Link>
+          
           <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light">
             Bridging the gap between data science precision and creative expression.
           </p>
+        
         </header>
 
         {/* Bento Box (便当盒) 布局：质感白色卡片 */}
