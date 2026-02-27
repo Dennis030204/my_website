@@ -20,9 +20,9 @@ export default function About() {
           </p>
           {/* 社交链接 (记得换成你的真实链接) */}
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Github className="w-5 h-5" /></a>
-            <a href="#" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Linkedin className="w-5 h-5" /></a>
-            <a href="mailto:DennisChen2003@outlook.com" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Mail className="w-5 h-5" /></a>
+            <a href="https://github.com/Dennis030204" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Github className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/rongzhidennischen2003/" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Linkedin className="w-5 h-5" /></a>
+            <a href="mailto:contact@rongzhi-chen.com" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Mail className="w-5 h-5" /></a>
           </div>
         </section>
 
@@ -176,7 +176,7 @@ export default function About() {
                 </span>
                 {/* 这里的 MBTI 你可以替换成你真实的，比如 ENTJ 或 INTJ */}
                 <span className="px-4 py-1.5 bg-indigo-500/30 border border-indigo-400/50 rounded-full text-xs font-bold tracking-widest uppercase text-indigo-200">
-                  MBTI: [你的MBTI]
+                  MBTI: [INFJ]
                 </span>
               </div>
               
