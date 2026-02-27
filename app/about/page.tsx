@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, FileText, BookOpen, Briefcase, GraduationCap, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowLeft, ArrowRight, FileText, BookOpen, Briefcase, GraduationCap, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function About() {
   return (
