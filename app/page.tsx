@@ -117,7 +117,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="md:col-span-3 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between"
           >
             <div>
