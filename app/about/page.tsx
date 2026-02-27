@@ -67,11 +67,34 @@ export default function About() {
             <h2 className="text-2xl font-bold">Publications</h2>
           </div>
           <div className="space-y-6">
-            <div className="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-bold mb-2">Title of Your Academic Paper or Research</h3>
-              <p className="text-sm text-slate-500 mb-3">Journal or Conference Name, 2025</p>
-              <p className="text-slate-600 text-sm">A brief abstract or summary of the research findings, methodologies used, and the impact of the paper.</p>
+            
+            {/* 论文卡片 */}
+            <div className="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-lg transition-all group relative">
+              <h3 className="text-lg font-bold mb-3 group-hover:text-blue-600 transition-colors leading-snug">
+                Stylometric Detection of AI-Generated Texts: Evidence from Human and Machine-Written Essays
+              </h3>
+              
+              {/* 作者列表，把你的名字加粗高亮 */}
+              <p className="text-sm text-slate-500 mb-4">
+                Jingqi He, <span className="font-semibold text-slate-800">Rongzhi Chen</span>, Shizhao Xiong, and Gordon J. Ross • 2022
+              </p>
+              
+              {/* 摘要精简版 */}
+              <p className="text-slate-600 text-sm mb-6 leading-relaxed">
+                This study adapts stylometric techniques to distinguish between human- and AI-generated texts across 110 subject areas. By evaluating classifiers like Burrows' Delta, Random Forest, and SVMs on a dataset of 4,346 essays, our findings reveal that AI-generated texts exhibit striking stylistic uniformity, while human writing is marked by variability and individuality.
+              </p>
+              
+              {/* 链接到你的 PDF 文件 */}
+              <a 
+                href="/ai-text-detection.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-600 text-sm font-semibold hover:text-blue-700 hover:gap-3 transition-all"
+              >
+                Read Full Paper <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
+
           </div>
         </section>
 
