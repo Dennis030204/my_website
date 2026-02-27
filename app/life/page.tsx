@@ -50,7 +50,7 @@ export default function LifeAndLogic() {
               {/* === 请将你的照片命名为 me.jpg 并放进 public/images 文件夹 === */}
               <Image 
                 src="/images/me.jpg" 
-                alt="Portrait of Kiki" 
+                alt="Portrait of Dennis" 
                 fill 
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
@@ -60,7 +60,7 @@ export default function LifeAndLogic() {
               </div>
             </div>
             <div className="absolute bottom-4 left-0 w-full text-center">
-              <span className="text-slate-400 font-mono text-sm tracking-widest">CAMBRIDGE, MA</span>
+              <span className="text-slate-400 font-mono text-sm tracking-widest">Grindelwaldm Switzerland</span>
             </div>
           </motion.div>
         </header>
@@ -104,7 +104,7 @@ export default function LifeAndLogic() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-indigo-400 mt-0.5">✦</span>
-                      <span>[Your Favorite Book Here]</span>
+                      <span>[Begin Again ]</span>
                     </li>
                   </ul>
                 </div>
