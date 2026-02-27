@@ -14,7 +14,7 @@ export default function About() {
         <section className="mb-20 animate-fade-in">
           <h1 className="text-4xl font-extrabold mb-6 tracking-tight">About Me</h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
-            Hi, I'm Jingqi (Kiki). I am currently pursuing my Master of Data Science at Harvard University. 
+            Hi, I'm Rongzhi (Dennis). I am currently pursuing my Master of Data Science at Harvard University. 
             My passion lies at the intersection of quantitative finance, predictive modeling, and strategic problem-solving. 
             Beyond algorithms and data, I am also a content creator exploring lifestyle aesthetics through a data-driven lens.
           </p>

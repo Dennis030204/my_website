@@ -1,100 +1,172 @@
+"use client";
+
 import Link from 'next/link';
-import { ArrowLeft, Camera, Utensils, Activity, PlayCircle } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Brain, UtensilsCrossed, BookOpen, Construction, Quote } from 'lucide-react';
 
 export default function LifeAndLogic() {
   return (
-    <main className="min-h-screen bg-[#f8fafc] text-slate-900 py-20 px-6">
+    <main className="min-h-screen bg-[#f8fafc] text-slate-900 py-20 px-6 overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        {/* 返回首页按钮 */}
-        <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-orange-500 mb-12 transition-colors">
-          <ArrowLeft className="w-4 h-4" /> Back to Home
-        </Link>
         
-        <header className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight text-slate-900">
-            Life & <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-rose-500">Logic</span>
-          </h1>
-          <p className="text-xl text-slate-600 max-w-2xl leading-relaxed font-light">
-            Content creation, the bottom-up logic of cooking, and capturing the aesthetics of daily life. 
-            Here is where algorithms meet creativity.
-          </p>
+        {/* 返回按钮 */}
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+          <Link href="/" className="inline-flex items-center gap-2 text-slate-500 hover:text-orange-500 mb-12 transition-colors">
+            <ArrowLeft className="w-4 h-4" /> Back to Home
+          </Link>
+        </motion.div>
+        
+        {/* 1. Hero 区域：你的专属照片与生活宣言 */}
+        <header className="mb-24 flex flex-col-reverse md:flex-row items-center gap-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="flex-1 space-y-6"
+          >
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              Life as an <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-rose-500">
+                Open System.
+              </span>
+            </h1>
+            <p className="text-xl text-slate-600 leading-relaxed font-light">
+              I treat daily life the same way I treat a machine learning model: define the objective function, understand the underlying variables, and iterate. 
+            </p>
+            <p className="text-slate-500 leading-relaxed">
+              This space is my digital sandbox. It's where I deconstruct cooking into thermal dynamics, dissect social interactions through critical thinking, and build my visual storytelling infrastructure from the ground up.
+            </p>
+          </motion.div>
+
+          {/* 你的专属照片位 (极具高级感的宝丽来边框设计) */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, rotate: -2 }} 
+            animate={{ opacity: 1, scale: 1, rotate: 2 }} 
+            transition={{ duration: 0.8, delay: 0.4, type: "spring" }}
+            className="w-64 h-80 md:w-80 md:h-[26rem] flex-shrink-0 bg-white p-4 pb-12 shadow-2xl rounded-sm border border-slate-100 relative group hover:rotate-0 transition-all duration-500"
+          >
+            <div className="relative w-full h-full bg-slate-200 overflow-hidden">
+              {/* === 请将你的照片命名为 me.jpg 并放进 public/images 文件夹 === */}
+              <Image 
+                src="/images/me.jpg" 
+                alt="Portrait of Kiki" 
+                fill 
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+              {/* 如果还没放照片，会显示这行占位文字 */}
+              <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium z-0">
+                [Drop your photo here]
+              </div>
+            </div>
+            <div className="absolute bottom-4 left-0 w-full text-center">
+              <span className="text-slate-400 font-mono text-sm tracking-widest">CAMBRIDGE, MA</span>
+            </div>
+          </motion.div>
         </header>
 
         <div className="space-y-24">
           
-          {/* 板块 1: 内容创作与视觉叙事 (Content Creation / Rednote) */}
-          <section>
+          {/* 2. 精神食粮 (The Information Diet) - 展现你对哲学的热爱 */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7 }}
+          >
             <div className="flex items-center gap-3 mb-8">
-              <Camera className="w-6 h-6 text-rose-500" />
-              <h2 className="text-2xl font-bold">Visual Storytelling & Aesthetics</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* 大图占位 */}
-              <div className="aspect-square md:aspect-[4/3] bg-slate-200 rounded-3xl overflow-hidden relative group">
-                {/* 以后在这里替换成真实的 <img> 标签 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-white font-medium">Beauty & Lifestyle Content (10k+ Community)</p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-center space-y-6 md:pl-8">
-                <h3 className="text-2xl font-bold leading-tight">Curating the Visual Experience</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Treating content creation not just as sharing, but as an exercise in visual logic and aesthetic presentation. Exploring how color, composition, and authentic storytelling build engagement and community.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* 板块 2: 底层逻辑烹饪 (The Data-Driven Chef) */}
-          <section>
-            <div className="flex items-center gap-3 mb-8">
-              <Utensils className="w-6 h-6 text-orange-500" />
-              <h2 className="text-2xl font-bold">The Bottom-Up Logic of Cooking</h2>
+              <Brain className="w-6 h-6 text-indigo-500" />
+              <h2 className="text-2xl font-bold">The Information Diet</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* 烹饪卡片 1 */}
-              <div className="bg-white border border-slate-200 p-6 rounded-3xl hover:shadow-xl transition-shadow group">
-                <div className="w-full h-48 bg-slate-100 rounded-2xl mb-6 flex items-center justify-center text-slate-400 group-hover:bg-orange-50 transition-colors">
-                  <PlayCircle className="w-10 h-10 opacity-50" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">Deconstructing Hot Pot</h3>
-                <p className="text-sm text-slate-500">Understanding flavor profiles and thermal dynamics behind the perfect broth.</p>
-              </div>
-              {/* 烹饪卡片 2 */}
-              <div className="bg-white border border-slate-200 p-6 rounded-3xl hover:shadow-xl transition-shadow group">
-                <div className="w-full h-48 bg-slate-100 rounded-2xl mb-6 flex items-center justify-center text-slate-400 group-hover:bg-orange-50 transition-colors">
-                  <PlayCircle className="w-10 h-10 opacity-50" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">Protein & Heat</h3>
-                <p className="text-sm text-slate-500">The science of searing and how temperature gradients affect texture.</p>
-              </div>
-              <div className="flex flex-col justify-center p-6">
-                <h3 className="text-xl font-bold mb-4">Why Bottom-Up?</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  Instead of blindly following recipes, I focus on the first principles of culinary arts. Once you understand the underlying variables—heat, acid, fat, and salt—you can model any dish.
+              <div className="col-span-1 md:col-span-2 bg-white border border-slate-200 p-8 rounded-3xl shadow-sm">
+                <Quote className="w-8 h-8 text-slate-200 mb-4" />
+                <h3 className="text-xl font-bold mb-4">Current Mental Models</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  Before outputting content, I focus on the quality of my inputs. My current deep dives involve intersecting <strong className="text-slate-800">Stoic philosophy</strong> with modern <strong className="text-slate-800">Societal Structures</strong>. I am fascinated by how individual agency operates within deterministic macro-environments.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium">Critical Thinking</span>
+                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium">Human Nature</span>
+                  <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full font-medium">Systems Theory</span>
+                </div>
+              </div>
+              
+              <div className="bg-slate-900 text-white border border-slate-800 p-8 rounded-3xl shadow-lg flex flex-col justify-between">
+                <div>
+                  <BookOpen className="w-6 h-6 text-slate-400 mb-4" />
+                  <h3 className="text-lg font-bold mb-2">On the Nightstand</h3>
+                  <ul className="space-y-3 text-sm text-slate-300 mt-4">
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>The Courage to Be Disliked (Adlerian Psychology)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>Meditations by Marcus Aurelius</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-400 mt-0.5">✦</span>
+                      <span>[Your Favorite Book Here]</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </section>
+          </motion.section>
 
-          {/* 板块 3: 生活方式与律动 (Life in Motion) */}
-          <section>
+          {/* 3. 做饭的底层逻辑 (Cooking from First Principles) - 文字与理论版 */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7 }}
+          >
             <div className="flex items-center gap-3 mb-8">
-              <Activity className="w-6 h-6 text-blue-500" />
-              <h2 className="text-2xl font-bold">Life in Motion</h2>
+              <UtensilsCrossed className="w-6 h-6 text-orange-500" />
+              <h2 className="text-2xl font-bold">First Principles of Cooking</h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* 照片墙布局占位 */}
-              <div className="aspect-square bg-slate-200 rounded-2xl hover:scale-[1.02] transition-transform"></div>
-              <div className="aspect-square bg-slate-200 rounded-2xl hover:scale-[1.02] transition-transform flex items-center justify-center text-center p-4">
-                <span className="text-slate-500 text-sm font-medium">Building Muscle & Fitness Routines</span>
-              </div>
-              <div className="aspect-square bg-slate-200 rounded-2xl hover:scale-[1.02] transition-transform"></div>
-              <div className="aspect-square bg-slate-200 rounded-2xl hover:scale-[1.02] transition-transform flex items-center justify-center text-center p-4">
-                <span className="text-slate-500 text-sm font-medium">Museums & Cultural Spaces</span>
+            <div className="bg-white border border-slate-200 p-8 rounded-3xl shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50 rounded-full blur-3xl -mr-20 -mt-20 z-0"></div>
+              <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Deconstructing the Recipe</h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    I rarely follow recipes blindly. Cooking is essentially applied physics and chemistry. Once you understand the underlying variables, you can reverse-engineer any dish.
+                  </p>
+                  <ul className="space-y-4">
+                    <li className="border-l-2 border-orange-500 pl-4">
+                      <strong className="block text-slate-900">1. Thermal Dynamics</strong>
+                      <span className="text-sm text-slate-500">The Maillard reaction vs. Caramelization. Heat transfer mediums (oil vs. water).</span>
+                    </li>
+                    <li className="border-l-2 border-rose-500 pl-4">
+                      <strong className="block text-slate-900">2. Flavor Matrices</strong>
+                      <span className="text-sm text-slate-500">Balancing Acid, Fat, Salt, and Heat. How capsaicin dissolves in lipids.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="w-full h-full min-h-[200px] border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center text-slate-400 bg-slate-50/50">
+                    <span className="font-mono text-sm tracking-wider">VISUAL DATA PENDING</span>
+                    <span className="text-xs mt-2">Documenting the kitchen experiments...</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
+          </motion.section>
+
+          {/* 4. 即将到来 (The Sandbox / Coming Soon) */}
+          <motion.section 
+            initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.7 }}
+            className="text-center py-16 border-t border-slate-200"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 text-slate-500 mb-6">
+              <Construction className="w-8 h-8" />
+            </div>
+            <h2 className="text-2xl font-bold mb-4">Infrastructure Under Construction</h2>
+            <p className="text-slate-500 max-w-lg mx-auto leading-relaxed">
+              I am currently laying the groundwork for visual storytelling and content creation. Vlogs, aesthetic experiments, and lifestyle analytics are being formulated. 
+            </p>
+            <div className="mt-8">
+              <span className="px-4 py-2 bg-slate-900 text-white text-sm font-semibold rounded-full shadow-lg">
+                Phase 1: Strategizing
+              </span>
+            </div>
+          </motion.section>
 
         </div>
       </div>
