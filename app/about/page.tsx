@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, FileText, BookOpen, Briefcase, GraduationCap, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowLeft, ArrowRight, FileText, BookOpen, Briefcase, GraduationCap, Github, Linkedin, Mail,BrainCircuit } from 'lucide-react';
 
 export default function About() {
   return (
@@ -150,6 +150,58 @@ export default function About() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* 5. 核心理念与底层哲学 (Core Ethos & Mindset) */}
+        <section className="mt-20">
+          <div className="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+            <BrainCircuit className="w-6 h-6 text-indigo-500" />
+            <h2 className="text-2xl font-bold">Mindset & Philosophy</h2>
+          </div>
+          
+          <div className="bg-slate-900 text-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+            {/* 极具深度的暗色背景光晕装饰 */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -mr-20 -mt-20 transition-transform duration-700 group-hover:scale-150"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl -ml-20 -mb-20 transition-transform duration-700 group-hover:scale-150"></div>
+            
+            <div className="relative z-10">
+              {/* 核心人格标签 */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase text-slate-200">
+                  Stoic Individualist
+                </span>
+                <span className="px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase text-slate-200">
+                  The Strategist
+                </span>
+                {/* 这里的 MBTI 你可以替换成你真实的，比如 ENTJ 或 INTJ */}
+                <span className="px-4 py-1.5 bg-indigo-500/30 border border-indigo-400/50 rounded-full text-xs font-bold tracking-widest uppercase text-indigo-200">
+                  MBTI: [你的MBTI]
+                </span>
+              </div>
+              
+              <h3 className="text-3xl font-extrabold mb-6 leading-tight tracking-tight">
+                Deconstructing Systems, <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-rose-400">
+                  Understanding Human Nature.
+                </span>
+              </h3>
+              
+              <div className="space-y-5 text-slate-300 font-light leading-relaxed text-lg">
+                <p>
+                  Beyond quantitative models and data pipelines, my deepest intellectual curiosity lies in <strong className="text-white font-semibold">sociology, philosophy, and the mechanics of human nature</strong>. I approach the world not just as a data scientist, but as a strategist navigating complex systems.
+                </p>
+                <p>
+                  I thrive on <strong className="text-white font-semibold">critical thinking and rigorous debate</strong>. True strategic advantage comes from understanding the underlying logic of society and the psychological drivers of human behavior. I build my sovereignty through an extreme internal locus of control—owning my efforts, decoding failures, and constantly evolving.
+                </p>
+                {/* 展现脆弱性与力量的宣言金句 */}
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <p className="italic text-slate-400 pl-4 border-l-2 border-indigo-500 text-base">
+                    "True sovereignty is not about building impenetrable armor, but having the courage to embrace vulnerability. It is about transforming the relentless drive of a 'lone wolf' into the empathetic vision of a leader who creates genuine value."
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
