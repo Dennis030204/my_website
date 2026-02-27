@@ -40,15 +40,19 @@ export default function Home() {
             Rongzhi Chen
           </motion.h1>
 
-          {/* 3. 按钮（延迟 0.3 秒跟进） */}
+          {/* 3. 按钮（带有高级物理点击反馈与悬停特效） */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            className="mb-8"
+            whileHover={{ scale: 1.03 }} // 悬停时微微浮起放大
+            whileTap={{ scale: 0.92 }}   // 点击瞬间：完美的物理按压下凹感！
+            className="mb-8 inline-block"
           >
-            <Link href="/about" className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200 shadow-sm">
-              More About Me & Resume <ArrowRight className="w-4 h-4" />
+            <Link href="/about" className="group inline-flex items-center gap-3 text-slate-900 font-semibold bg-white border border-slate-200 px-8 py-4 rounded-full hover:shadow-md hover:border-slate-300 transition-all shadow-sm">
+              More About Me & Resume 
+              {/* 箭头特效：悬停时向右平移，配合按钮放大，极其丝滑 */}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300 ease-out" />
             </Link>
           </motion.div>
           
