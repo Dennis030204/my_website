@@ -64,11 +64,17 @@ export default function Home() {
         
         </header>
 
-        {/* Bento Box (便当盒) 布局：质感白色卡片 */}
+        {/* Bento Box (便当盒) 布局：滚动触发特效 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          {/* 大卡片：专业作品集 */}
-          <div className="md:col-span-2 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 md:p-10 transition-all hover:shadow-xl shadow-sm">
+          {/* 1. 大卡片：专业作品集 (最先浮现) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="md:col-span-2 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 md:p-10 transition-all hover:shadow-xl shadow-sm"
+          >
             <div className="absolute -top-10 -right-10 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
               <Code2 className="w-64 h-64 text-blue-600" />
             </div>
@@ -82,10 +88,16 @@ export default function Home() {
                 Explore Projects <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* 右侧小卡片 1：内容创作 */}
-          <div className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-50 to-purple-50 border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm">
+          {/* 2. 右侧小卡片：Thoughts (延迟 0.3 秒跟进) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-50 to-purple-50 border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm"
+          >
             <BookOpen className="w-8 h-8 text-purple-600 mb-6" />
             <h2 className="text-2xl font-bold mb-3 tracking-tight text-slate-900">Thoughts</h2>
             <p className="text-slate-600 mb-8 leading-relaxed">
@@ -94,10 +106,16 @@ export default function Home() {
             <Link href="/blog" className="inline-flex items-center gap-2 text-purple-700 font-semibold group-hover:gap-3 transition-all w-fit">
               Read Articles <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </motion.div>
 
-          {/* 底部全宽卡片：生活方式/Vlog */}
-          <div className="md:col-span-3 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between">
+          {/* 3. 底部全宽卡片：Life & Logic (延迟 0.5 秒最后落位) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="md:col-span-3 group relative overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 transition-all hover:shadow-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between"
+          >
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <Coffee className="w-6 h-6 text-orange-500" />
@@ -108,7 +126,7 @@ export default function Home() {
             <Link href="/life" className="mt-6 md:mt-0 inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 shadow-sm w-fit">
               View Gallery <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </main>
     </div>
