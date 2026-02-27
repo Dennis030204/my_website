@@ -54,13 +54,10 @@ export default function LifeAndLogic() {
                 fill 
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
-              {/* 如果还没放照片，会显示这行占位文字 */}
-              <div className="absolute inset-0 flex items-center justify-center text-slate-400 text-sm font-medium z-0">
-                [Drop your photo here]
-              </div>
+
             </div>
             <div className="absolute bottom-4 left-0 w-full text-center">
-              <span className="text-slate-400 font-mono text-sm tracking-widest">Grindelwaldm Switzerland</span>
+              <span className="text-slate-400 font-mono text-sm tracking-widest">Grindelwald, Switzerland</span>
             </div>
           </motion.div>
         </header>
@@ -104,7 +101,7 @@ export default function LifeAndLogic() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-indigo-400 mt-0.5">✦</span>
-                      <span>[Begin Again ]</span>
+                      <span>Begin Again</span>
                     </li>
                   </ul>
                 </div>

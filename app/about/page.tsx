@@ -89,7 +89,7 @@ export default function About() {
                 Stylometric Detection of AI-Generated Texts: Evidence from Human and Machine-Written Essays
               </h3>
               <p className="text-sm text-slate-500 mb-4">
-                Jingqi He, <span className="font-semibold text-slate-800">Rongzhi Chen</span>, Shizhao Xiong, and Gordon J. Ross • 2022
+                <span className="font-semibold text-slate-800">Rongzhi Chen</span>, Jingqi He, Shizhao Xiong, and Gordon J. Ross • 2022
               </p>
               <p className="text-slate-600 text-sm mb-6 leading-relaxed">
                 This study adapts stylometric techniques to distinguish between human- and AI-generated texts across 110 subject areas. By evaluating classifiers like Burrows' Delta, Random Forest, and SVMs on a dataset of 4,346 essays, our findings reveal that AI-generated texts exhibit striking stylistic uniformity, while human writing is marked by variability and individuality.
