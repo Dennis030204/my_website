@@ -16,22 +16,51 @@ export default function Home() {
 
       <main className="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-32">
         
-        {/* Hero 区域：视觉第一落点 */}
-        <header className="mb-20 flex flex-col items-start animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm text-slate-600 mb-8 hover:shadow-md transition-shadow">
+      {/* Hero 区域：视觉第一落点 */}
+        <header className="mb-20 flex flex-col items-start">
+          
+          {/* 1. 顶部小标签（最先浮现） */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm text-slate-600 mb-8 hover:shadow-md transition-shadow"
+          >
             <Sparkles className="w-4 h-4 text-blue-500" />
             <span>Welcome to my digital universe</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900">
+          </motion.div>
+
+          {/* 2. 你的名字（延迟 0.15 秒跟进） */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-slate-900"
+          >
             Rongzhi Chen
-          </h1>
-          <Link href="/about" className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200 shadow-sm">
-            More About Me & Resume <ArrowRight className="w-4 h-4" />
-          </Link>
+          </motion.h1>
+
+          {/* 3. 按钮（延迟 0.3 秒跟进） */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="mb-8"
+          >
+            <Link href="/about" className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:gap-4 transition-all bg-slate-100 px-6 py-3 rounded-full hover:bg-slate-200 shadow-sm">
+              More About Me & Resume <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
           
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light">
+          {/* 4. 个人简介段落（延迟 0.45 秒最后落位） */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+            className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light"
+          >
             Where rigorous thinking meets everyday creativity—building clarity you can actually use.
-          </p>
+          </motion.p>
         
         </header>
 

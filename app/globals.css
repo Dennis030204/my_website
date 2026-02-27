@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* 隐藏丑陋的滚动条，但保留滚动功能 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
