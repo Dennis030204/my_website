@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, BookOpen, Code2, LineChart, Coffee } from 'lucide-react';
 import Link from 'next/link';
 
@@ -28,7 +30,7 @@ export default function Home() {
           </Link>
           
           <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-light">
-            Bridging the gap between data science precision and creative expression.
+            Where rigorous thinking meets everyday creativity—building clarity you can actually use.
           </p>
         
         </header>

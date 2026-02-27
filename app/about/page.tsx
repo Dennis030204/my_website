@@ -16,13 +16,13 @@ export default function About() {
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
             Hi, I'm Rongzhi (Dennis). I am currently pursuing my Master of Data Science at Harvard University. 
             My passion lies at the intersection of quantitative finance, sports data analytics, and strategic problem-solving. 
-            Beyond algorithms and models, I am also a content creator exploring beauty and lifestyle through a data-driven lens.
+            Beyond algorithms and models, I am also a content creator exploring food and lifestyle through a critical-thinking lens.
           </p>
           {/* 社交链接 */}
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Github className="w-5 h-5" /></a>
-            <a href="#" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Linkedin className="w-5 h-5" /></a>
-            <a href="mailto:your.email@example.com" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Mail className="w-5 h-5" /></a>
+            <a href="https://github.com/Dennis030204" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Github className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/in/rongzhidennischen2003/" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Linkedin className="w-5 h-5" /></a>
+            <a href="mailto:contact@rongzhi-chen.com" className="p-2 bg-white border border-slate-200 rounded-full hover:shadow-md transition-all text-slate-600 hover:text-blue-600"><Mail className="w-5 h-5" /></a>
           </div>
         </section>
 
