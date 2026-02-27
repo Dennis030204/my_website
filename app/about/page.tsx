@@ -40,6 +40,12 @@ export default function About() {
               <p className="text-blue-600 font-medium text-sm mb-2">Master of Data Science • Expected Graduation</p>
               <p className="text-slate-500 text-sm">Focusing on advanced statistical modeling, machine learning, and quantitative analysis.</p>
             </div>
+            <div className="relative">
+              <div className="absolute -left-[21px] top-1.5 w-3 h-3 bg-blue-300 rounded-full border-2 border-white"></div>
+              <h3 className="text-xl font-bold">University of Edinburgh</h3>
+              <p className="text-blue-600 font-medium text-sm mb-2">Bachlor of Science, Mathematics and Statistics • 2021/Sep to 2025/Sep</p>
+              <p className="text-slate-500 text-sm">Focusing on advanced statistical modeling, machine learning, and quantitative analysis.</p>
+            </div>
             {/* 实习/工作经历 */}
             <div className="relative">
               <div className="absolute -left-[21px] top-1.5 w-3 h-3 bg-slate-300 rounded-full border-2 border-white"></div>
